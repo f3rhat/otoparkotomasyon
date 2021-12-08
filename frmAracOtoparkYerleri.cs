@@ -15,6 +15,8 @@ namespace Otopark_Otomasyonu
         {
             InitializeComponent();
         }
+        SqlConnection baglantı = new SqlConnection("Data Source=MSI;Initial Catalog=Otopark_Otomasyonu;Integrated Security=True");
+
 
         private void frmAracOtoparkYerleri_Load(object sender, EventArgs e)
         {
