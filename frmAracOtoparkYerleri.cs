@@ -15,18 +15,40 @@ namespace Otopark_Otomasyonu
         {
             InitializeComponent();
         }
-        SqlConnection baglantı = new SqlConnection("Data Source=MSI;Initial Catalog=Otopark_Otomasyonu;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=MSI;Initial Catalog=Otopark_ Otomasyonu;Integrated Security=True");
 
 
         private void frmAracOtoparkYerleri_Load(object sender, EventArgs e)
         {
-            int sayac = 1;
-            foreach (Control item in Controls) 
+            BoşParkYerleri();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(" select*from arac_durumu",baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
             {
-                if (item is Button) 
+                foreach (Control item in Controls)
                 {
-                    item.Text = "P-"+sayac;
-                    item.Name = "P-"+ sayac;
+                    if (item is Button)
+                    {
+                        if (item.Text== read["ParkYeri"].ToString() && read ["ParkDurumu"].ToString()=="DOLU")
+                        {
+                            item.BackColor = Color.Red;
+                        }
+                    }
+                }
+            }
+            baglanti.Close();
+        }
+
+        private void BoşParkYerleri()
+        {
+            int sayac = 1;
+            foreach (Control item in Controls)
+            {
+                if (item is Button)
+                {
+                    item.Text = "P-" + sayac;
+                    item.Name = "P-" + sayac;
                     sayac++;
                 }
 
