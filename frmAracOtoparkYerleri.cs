@@ -21,8 +21,9 @@ namespace Otopark_Otomasyonu
         private void frmAracOtoparkYerleri_Load(object sender, EventArgs e)
         {
             BoşParkYerleri();
+            DoluParkYerleri();
             baglanti.Open();
-            SqlCommand komut = new SqlCommand(" select*from arac_durumu",baglanti);
+            SqlCommand komut = new SqlCommand(" select*from arac_otopark_kaydı", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -30,7 +31,28 @@ namespace Otopark_Otomasyonu
                 {
                     if (item is Button)
                     {
-                        if (item.Text== read["ParkYeri"].ToString() && read ["ParkDurumu"].ToString()=="DOLU")
+                        if (item.Text == read["ParkYeri"].ToString())
+                        {
+                            item.Text = read["Plaka"].ToString();
+                        }
+                    }
+                }
+            }
+            baglanti.Close();
+        }
+
+        private void DoluParkYerleri()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(" select*from arac_durumu", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                foreach (Control item in Controls)
+                {
+                    if (item is Button)
+                    {
+                        if (item.Text == read["ParkYeri"].ToString() && read["ParkDurumu"].ToString() == "DOLU")
                         {
                             item.BackColor = Color.Red;
                         }
