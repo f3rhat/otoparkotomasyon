@@ -29,6 +29,7 @@ namespace Otopark_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAracOtoparkKaydı));
             this.txtTC = new System.Windows.Forms.TextBox();
             this.txtRenk = new System.Windows.Forms.TextBox();
             this.txtPlaka = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@ namespace Otopark_Otomasyonu
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grpArac = new System.Windows.Forms.GroupBox();
+            this.btnSeri = new System.Windows.Forms.Button();
+            this.btnMarka = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,8 +56,6 @@ namespace Otopark_Otomasyonu
             this.label6 = new System.Windows.Forms.Label();
             this.btnKayıt = new System.Windows.Forms.Button();
             this.btnIptal = new System.Windows.Forms.Button();
-            this.btnMarka = new System.Windows.Forms.Button();
-            this.btnSeri = new System.Windows.Forms.Button();
             this.grpKişi.SuspendLayout();
             this.grpArac.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +136,7 @@ namespace Otopark_Otomasyonu
             // 
             // grpKişi
             // 
+            this.grpKişi.BackColor = System.Drawing.Color.DimGray;
             this.grpKişi.Controls.Add(this.label5);
             this.grpKişi.Controls.Add(this.label4);
             this.grpKişi.Controls.Add(this.label3);
@@ -146,7 +148,7 @@ namespace Otopark_Otomasyonu
             this.grpKişi.Controls.Add(this.txtSoyad);
             this.grpKişi.Controls.Add(this.txtAd);
             this.grpKişi.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpKişi.Location = new System.Drawing.Point(90, 24);
+            this.grpKişi.Location = new System.Drawing.Point(219, 27);
             this.grpKişi.Name = "grpKişi";
             this.grpKişi.Size = new System.Drawing.Size(277, 248);
             this.grpKişi.TabIndex = 10;
@@ -205,6 +207,7 @@ namespace Otopark_Otomasyonu
             // 
             // grpArac
             // 
+            this.grpArac.BackColor = System.Drawing.Color.DimGray;
             this.grpArac.Controls.Add(this.btnSeri);
             this.grpArac.Controls.Add(this.btnMarka);
             this.grpArac.Controls.Add(this.label10);
@@ -218,12 +221,32 @@ namespace Otopark_Otomasyonu
             this.grpArac.Controls.Add(this.cmbMarka);
             this.grpArac.Controls.Add(this.cmbSeri);
             this.grpArac.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grpArac.Location = new System.Drawing.Point(373, 24);
+            this.grpArac.Location = new System.Drawing.Point(502, 27);
             this.grpArac.Name = "grpArac";
             this.grpArac.Size = new System.Drawing.Size(283, 248);
             this.grpArac.TabIndex = 11;
             this.grpArac.TabStop = false;
             this.grpArac.Text = "Araç Bilgileri";
+            // 
+            // btnSeri
+            // 
+            this.btnSeri.Location = new System.Drawing.Point(265, 110);
+            this.btnSeri.Name = "btnSeri";
+            this.btnSeri.Size = new System.Drawing.Size(17, 23);
+            this.btnSeri.TabIndex = 16;
+            this.btnSeri.Text = "+";
+            this.btnSeri.UseVisualStyleBackColor = true;
+            this.btnSeri.Click += new System.EventHandler(this.btnSeri_Click);
+            // 
+            // btnMarka
+            // 
+            this.btnMarka.Location = new System.Drawing.Point(265, 81);
+            this.btnMarka.Name = "btnMarka";
+            this.btnMarka.Size = new System.Drawing.Size(17, 22);
+            this.btnMarka.TabIndex = 15;
+            this.btnMarka.Text = "+";
+            this.btnMarka.UseVisualStyleBackColor = true;
+            this.btnMarka.Click += new System.EventHandler(this.btnMarka_Click);
             // 
             // label10
             // 
@@ -277,58 +300,41 @@ namespace Otopark_Otomasyonu
             // 
             // btnKayıt
             // 
+            this.btnKayıt.BackColor = System.Drawing.Color.Red;
             this.btnKayıt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnKayıt.Location = new System.Drawing.Point(150, 333);
+            this.btnKayıt.Location = new System.Drawing.Point(318, 367);
             this.btnKayıt.Name = "btnKayıt";
             this.btnKayıt.Size = new System.Drawing.Size(86, 32);
             this.btnKayıt.TabIndex = 12;
             this.btnKayıt.Text = "Kayıt";
-            this.btnKayıt.UseVisualStyleBackColor = true;
+            this.btnKayıt.UseVisualStyleBackColor = false;
             this.btnKayıt.Click += new System.EventHandler(this.btnKayıt_Click);
             // 
             // btnIptal
             // 
+            this.btnIptal.BackColor = System.Drawing.Color.Red;
             this.btnIptal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnIptal.Location = new System.Drawing.Point(438, 330);
+            this.btnIptal.Location = new System.Drawing.Point(565, 367);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(87, 35);
             this.btnIptal.TabIndex = 13;
             this.btnIptal.Text = "İptal";
-            this.btnIptal.UseVisualStyleBackColor = true;
+            this.btnIptal.UseVisualStyleBackColor = false;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
-            // 
-            // btnMarka
-            // 
-            this.btnMarka.Location = new System.Drawing.Point(265, 81);
-            this.btnMarka.Name = "btnMarka";
-            this.btnMarka.Size = new System.Drawing.Size(17, 22);
-            this.btnMarka.TabIndex = 15;
-            this.btnMarka.Text = "+";
-            this.btnMarka.UseVisualStyleBackColor = true;
-            this.btnMarka.Click += new System.EventHandler(this.btnMarka_Click);
-            // 
-            // btnSeri
-            // 
-            this.btnSeri.Location = new System.Drawing.Point(265, 110);
-            this.btnSeri.Name = "btnSeri";
-            this.btnSeri.Size = new System.Drawing.Size(17, 23);
-            this.btnSeri.TabIndex = 16;
-            this.btnSeri.Text = "+";
-            this.btnSeri.UseVisualStyleBackColor = true;
-            this.btnSeri.Click += new System.EventHandler(this.btnSeri_Click);
             // 
             // frmAracOtoparkKaydı
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(772, 448);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(970, 548);
             this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.btnKayıt);
             this.Controls.Add(this.grpArac);
             this.Controls.Add(this.grpKişi);
             this.Name = "frmAracOtoparkKaydı";
-            this.Text = "AraçOtopark Kaydı Sayfası";
+            this.Text = "Araç Otopark Kaydı Sayfası";
             this.Load += new System.EventHandler(this.frmAracOtoparkKaydı_Load);
             this.grpKişi.ResumeLayout(false);
             this.grpKişi.PerformLayout();

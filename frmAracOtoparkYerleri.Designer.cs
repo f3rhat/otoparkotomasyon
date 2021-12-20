@@ -29,6 +29,7 @@ namespace Otopark_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAracOtoparkYerleri));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,99 +46,110 @@ namespace Otopark_Otomasyonu
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(187, 56);
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.Location = new System.Drawing.Point(295, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "P-10";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(187, 106);
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.Location = new System.Drawing.Point(295, 133);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 1;
             this.button2.Text = "P-9";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(187, 158);
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.Location = new System.Drawing.Point(295, 181);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 25);
             this.button3.TabIndex = 2;
             this.button3.Text = "P-8";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(187, 205);
+            this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.Location = new System.Drawing.Point(295, 229);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 25);
             this.button4.TabIndex = 3;
             this.button4.Text = "P-7";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(187, 249);
+            this.button5.BackColor = System.Drawing.Color.Gray;
+            this.button5.Location = new System.Drawing.Point(295, 277);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 25);
             this.button5.TabIndex = 4;
             this.button5.Text = "P-6";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(414, 56);
+            this.button6.BackColor = System.Drawing.Color.Gray;
+            this.button6.Location = new System.Drawing.Point(522, 85);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 25);
             this.button6.TabIndex = 5;
             this.button6.Text = "P-5";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(414, 106);
+            this.button7.BackColor = System.Drawing.Color.Gray;
+            this.button7.Location = new System.Drawing.Point(522, 133);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 25);
             this.button7.TabIndex = 6;
             this.button7.Text = "P-4";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(414, 158);
+            this.button8.BackColor = System.Drawing.Color.Gray;
+            this.button8.Location = new System.Drawing.Point(522, 181);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 25);
             this.button8.TabIndex = 7;
             this.button8.Text = "P-3";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(414, 205);
+            this.button9.BackColor = System.Drawing.Color.Gray;
+            this.button9.Location = new System.Drawing.Point(522, 229);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 25);
             this.button9.TabIndex = 8;
             this.button9.Text = "P-2";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(414, 249);
+            this.button10.BackColor = System.Drawing.Color.Gray;
+            this.button10.Location = new System.Drawing.Point(522, 277);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 25);
             this.button10.TabIndex = 9;
             this.button10.Text = "P-1";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(316, 11);
+            this.label1.Location = new System.Drawing.Point(424, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 10;
@@ -146,8 +158,9 @@ namespace Otopark_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Silver;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(316, 340);
+            this.label2.Location = new System.Drawing.Point(424, 375);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 11;
@@ -158,7 +171,8 @@ namespace Otopark_Otomasyonu
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(682, 430);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(852, 519);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button10);
@@ -173,7 +187,7 @@ namespace Otopark_Otomasyonu
             this.Controls.Add(this.button1);
             this.Name = "frmAracOtoparkYerleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AraçOtopark Yerleri";
+            this.Text = "Araç Otopark Yerleri";
             this.Load += new System.EventHandler(this.frmAracOtoparkYerleri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

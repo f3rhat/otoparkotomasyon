@@ -29,6 +29,7 @@ namespace Otopark_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaSayfa));
             this.btnAracKayıt = new System.Windows.Forms.Button();
             this.btnAracYer = new System.Windows.Forms.Button();
             this.btnAracCıkıs = new System.Windows.Forms.Button();
@@ -37,42 +38,46 @@ namespace Otopark_Otomasyonu
             // 
             // btnAracKayıt
             // 
-            this.btnAracKayıt.Location = new System.Drawing.Point(235, 78);
+            this.btnAracKayıt.BackColor = System.Drawing.Color.Silver;
+            this.btnAracKayıt.Location = new System.Drawing.Point(359, 114);
             this.btnAracKayıt.Name = "btnAracKayıt";
-            this.btnAracKayıt.Size = new System.Drawing.Size(270, 23);
+            this.btnAracKayıt.Size = new System.Drawing.Size(270, 56);
             this.btnAracKayıt.TabIndex = 0;
             this.btnAracKayıt.Text = "Araç Otopark Kaydı Sayfası";
-            this.btnAracKayıt.UseVisualStyleBackColor = true;
+            this.btnAracKayıt.UseVisualStyleBackColor = false;
             this.btnAracKayıt.Click += new System.EventHandler(this.btnAracKayıt_Click);
             // 
             // btnAracYer
             // 
-            this.btnAracYer.Location = new System.Drawing.Point(235, 139);
+            this.btnAracYer.BackColor = System.Drawing.Color.Silver;
+            this.btnAracYer.Location = new System.Drawing.Point(359, 176);
             this.btnAracYer.Name = "btnAracYer";
-            this.btnAracYer.Size = new System.Drawing.Size(270, 23);
+            this.btnAracYer.Size = new System.Drawing.Size(270, 55);
             this.btnAracYer.TabIndex = 1;
             this.btnAracYer.Text = "Araç Otopark Yerleri";
-            this.btnAracYer.UseVisualStyleBackColor = true;
+            this.btnAracYer.UseVisualStyleBackColor = false;
             this.btnAracYer.Click += new System.EventHandler(this.btnAracYer_Click);
             // 
             // btnAracCıkıs
             // 
-            this.btnAracCıkıs.Location = new System.Drawing.Point(235, 196);
+            this.btnAracCıkıs.BackColor = System.Drawing.Color.Silver;
+            this.btnAracCıkıs.Location = new System.Drawing.Point(359, 237);
             this.btnAracCıkıs.Name = "btnAracCıkıs";
-            this.btnAracCıkıs.Size = new System.Drawing.Size(270, 23);
+            this.btnAracCıkıs.Size = new System.Drawing.Size(270, 51);
             this.btnAracCıkıs.TabIndex = 2;
             this.btnAracCıkıs.Text = "Araç Otopark Çıkış Sayfası";
-            this.btnAracCıkıs.UseVisualStyleBackColor = true;
+            this.btnAracCıkıs.UseVisualStyleBackColor = false;
             this.btnAracCıkıs.Click += new System.EventHandler(this.btnAracCıkıs_Click);
             // 
             // btnCıkıs
             // 
-            this.btnCıkıs.Location = new System.Drawing.Point(235, 258);
+            this.btnCıkıs.BackColor = System.Drawing.Color.Silver;
+            this.btnCıkıs.Location = new System.Drawing.Point(359, 294);
             this.btnCıkıs.Name = "btnCıkıs";
-            this.btnCıkıs.Size = new System.Drawing.Size(270, 23);
+            this.btnCıkıs.Size = new System.Drawing.Size(270, 56);
             this.btnCıkıs.TabIndex = 3;
             this.btnCıkıs.Text = "Çıkış";
-            this.btnCıkıs.UseVisualStyleBackColor = true;
+            this.btnCıkıs.UseVisualStyleBackColor = false;
             this.btnCıkıs.Click += new System.EventHandler(this.btnCıkıs_Click);
             // 
             // frmAnaSayfa
@@ -80,7 +85,8 @@ namespace Otopark_Otomasyonu
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(926, 556);
             this.Controls.Add(this.btnCıkıs);
             this.Controls.Add(this.btnAracCıkıs);
             this.Controls.Add(this.btnAracYer);
