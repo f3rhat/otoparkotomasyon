@@ -19,6 +19,20 @@ namespace Otopark_Otomasyonu
         private void frmAracOtoparkKaydı_Load(object sender, EventArgs e)
         {
             BoşAraçlar();
+            Marka();
+            
+        }
+
+        private void Marka()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select marka from arac_marka_bilgileri", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                cmbMarka.Items.Add(read["marka"].ToString());
+            }
+            baglanti.Close();
         }
 
         private void BoşAraçlar()
@@ -53,14 +67,67 @@ namespace Otopark_Otomasyonu
             komut.Parameters.AddWithValue("@Renk", txtRenk.Text);
             komut.Parameters.AddWithValue("@ParkYeri", cmbPark.Text);
             komut.Parameters.AddWithValue("@Tarih",DateTime.Now.ToString());
+           
             komut.ExecuteNonQuery();
 
-            SqlCommand komut2 = new SqlCommand("uptade arac_durumu set ParkDurumu = 'DOLU' where ParkYeri = '"+cmbPark.SelectedItem+"'",baglanti);
+            var sqlKomut = "update arac_durumu set ParkDurumu = 'DOLU' where ParkYeri = '" + cmbPark.SelectedItem + "'";
+
+            SqlCommand komut2 = new SqlCommand(sqlKomut,baglanti);
             komut2.ExecuteNonQuery(); 
             baglanti.Close();
             MessageBox.Show("Araç Kaydı Oluşturuldu","Kayıt");
             cmbPark.Items.Clear();
             BoşAraçlar();
+            cmbMarka.Items.Clear();
+            Marka();
+            cmbSeri.Items.Clear();
+            foreach (Control item in grpKişi.Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                }
+            }
+            foreach (Control item in grpArac.Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                }
+            }
+            foreach (Control item in grpArac.Controls)
+            {
+                if (item is ComboBox)
+                {
+                    item.Text = "";
+                }
+            }
+        }
+
+        private void btnMarka_Click(object sender, EventArgs e)
+        {
+            frmMarka marka = new frmMarka();
+            marka.ShowDialog();
+        }
+
+        private void btnSeri_Click(object sender, EventArgs e)
+        {
+            frmSeri seri = new frmSeri();
+            seri.ShowDialog();
+
+        }
+
+        private void cmbMarka_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbSeri.Items.Clear();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select A_seri from arac_seri_bilgileri where A_Marka='"+cmbMarka.SelectedItem+"'", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                cmbSeri.Items.Add(read["A_Seri"].ToString());
+            }
+            baglanti.Close();
         }
     }
 }
